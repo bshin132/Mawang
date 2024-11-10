@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 30px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 1px solid #000;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+/* Logo */
+.logo img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.text_logo {
+  width: 100px !important;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 24px;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+  font-family: "Raleway", sans-serif;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ed1d24;
+  transition: 0.3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+/* Hamburger Menu (for mobile view) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+}
+
+button,
+.footer-container img {
+  transition: transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.footer-container img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
+
+/* CONTENT */
+/* ABOUT FRANCHISE */
+.about-franchise {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  margin-top: 80px; /* Add this line to clear the fixed header */
+}
+
+.about-franchise h1 {
+  letter-spacing: 6px;
+  z-index: 0;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  margin-bottom: 5px;
+  color: #ed1d24;
+}
+
+.about-franchise p {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 32px;
+  font-style: normal;
+  z-index: 0;
+}
+
+.opening-line {
+  border-bottom: 3px solid #ed1d24;
+  border-radius: 5px;
+  margin: auto;
+  width: 80px;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+/* CONTINUE TO INVEST */
+.continue-to-invest {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative; /* Allows layering */
+  overflow: hidden; /* Ensures background doesn’t spill out */
+}
+
+.background2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(/images/franchise_store.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); /* Applies blur only to the background */
+  /* -webkit-filter: blur(2px); */
+  z-index: 1; /* Places background behind the text */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 2; /* Places overlay above the background */
+}
+
+.continue-to-invest h1,
+.continue-to-invest img {
+  position: relative;
+  z-index: 3; /* Ensures text and logo are on top of the overlay */
+  color: #fff; /* Optional: to ensure text stands out */
+}
+
+.continue-to-invest h1 {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+
+.continue-to-invest img {
+  width: 300px;
+}
+
+.block {
+  border-bottom: 40px solid #ed1d24;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/mawang_store2.png);
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px); /* Applies blur only to the background */
+  -webkit-filter: blur(2px);
+  z-index: 1; /* Places background behind the text */
+}
+
+/* INTRO */
+.intro {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.intro p {
+  margin-bottom: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+.bold {
+  font-size: 36px;
+  color: #ed1d24;
+}
+
+.gallery-pics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  width: 40%;
+}
+
+.gallery-pics img {
+  width: 500px;
+  border-radius: 10px;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* OUR MISSION */
+.mission {
+  display: flex;
+  background-color: #ed1d24;
+  margin-bottom: 50px;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: #fff;
+}
+
+.mission-content,
+.values-content,
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+.mission-subtitle {
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.mission-statement {
+  font-size: 18px;
+  text-align: justify;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mission-content {
+  width: 500px;
+  margin-bottom: 80px;
+}
+
+.mission img {
+  width: 400px;
+  height: 400px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* VALUES */
+.values {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.values img {
+  width: 400px;
+  height: 400px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.values-content {
+  width: 500px;
+  margin-bottom: 180px;
+}
+
+.values-points {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.values-points-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #ed1d24;
+  margin: 15px;
+  height: 250px;
+  width: 180px;
+  border-radius: 0 0 30px 30px;
+  padding: 15px;
+}
+
+.values-points-content img {
+  width: 70px;
+}
+
+.values-points-content h1 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.values-points-content p {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: #ed1d24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 28px;
+  color: #fff;
+}
+
+.social {
+  width: 50px;
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.footer-container a {
+  text-decoration: none;
+}
+
+@media (max-width: 890px) {
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+
+  .navbar a {
+    margin-left: 0;
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .continue-to-invest h1 {
+    text-align: center;
+  }
+
+  .intro p {
+    text-align: justify;
+  }
+
+  .intro {
+    width: 90%; /* Take up more width on smaller screens */
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .gallery-pics {
+    display: flex; /* Use flexbox instead of grid */
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center images horizontally */
+    width: 100%; /* Take up the full width */
+    grid-template-columns: none; /* Remove the grid layout */
+  }
+
+  .gallery-pics img {
+    width: 80%; /* Images will take 80% of the width */
+    height: auto; /* Let the height adjust automatically */
+    margin-bottom: 15px; /* Add space between images */
+  }
+
+  .gallery-pics img {
+    width: 300px;
+    height: 300px;
+  }
+}

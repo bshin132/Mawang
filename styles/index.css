@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* MAIN PAGE */
+.main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /* Ensures full height of the page */
+  background: url(/images/homepage_bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 30px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 1px solid #000;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+/* Logo */
+.logo img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.text_logo {
+  width: 100px !important;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 24px;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+  font-family: "Raleway", sans-serif;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ed1d24;
+  transition: 0.3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+/* Hamburger Menu (for mobile view) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+}
+
+.main {
+  display: flex; /* Use Flexbox to center content */
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: center; /* Center content vertically */
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  color: #fff;
+  flex-grow: 1; /* Allow it to grow and push the footer down */
+}
+
+.main h2 {
+  font-size: 102px;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 26px;
+}
+
+.main p {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 45px;
+}
+
+.footer {
+  width: 100%; /* Ensure the footer spans full width */
+  background-color: #ed1d24;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  padding: 0px 160px;
+  height: 100px;
+  overflow: visible; /* Hides the overflowing content */
+}
+
+.footer-text {
+  display: flex; /* Use flexbox for the text section */
+  align-items: center; /* Center items vertically */
+  margin-left: 250px; /* Add some space between logo and text */
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #fff;
+  font-size: 32px;
+}
+
+.footer-text p {
+  margin-left: 20px;
+}
+
+.footer-logo {
+  height: 250px;
+  overflow: visible;
+  position: absolute; /* Positions the image within the footer */
+  bottom: 0px; /* Aligns the image to the bottom of the footer */
+}
+
+.line {
+  border: none;
+  background: #fff;
+  height: 2px;
+  width: 80px; /* Width of the line */
+  margin-right: 10px; /* Space between line and text */
+}
+
+/* HELLO THERE PAGE */
+
+.hello-there {
+  position: relative;
+  height: 100vh;
+  display: flex; /* Use Flexbox to center content */
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: center; /* Center content vertically */
+  overflow: hidden; /* Prevents clouds from spilling outside the container */
+}
+
+.hello-there-content {
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+  position: relative;
+  top: 50px;
+}
+
+.cloud1 {
+  position: absolute;
+  top: 80px;
+  right: -80px;
+  width: 500px;
+  z-index: 50;
+}
+
+.cloud2 {
+  bottom: 0;
+  left: -100px; /* Positions the second cloud at the bottom-left corner */
+  width: 500px;
+  position: relative;
+}
+
+.hello-there h2 {
+  font-size: 102px;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 26px;
+  color: #ed1d24;
+}
+
+.hello-there p {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  width: 750px;
+}
+
+.hello-there button {
+  background-color: #ed1d24;
+  width: 120px;
+  height: 45px;
+  font-size: 18px;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button,
+.footer-container img {
+  transition: transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.footer-container img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
+
+.hi-logo {
+  bottom: -100px;
+  right: -90px;
+  position: absolute;
+  width: 300px;
+  transform: rotate(-45deg);
+  z-index: -100;
+}
+
+/* DISCOVER FOOD */
+.discover-food {
+  height: 100vh;
+  background: url(/images/food_wallpaper.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden; /* Prevents clouds from spilling outside the container */
+}
+
+.discover-food-header {
+  font-size: 102px;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 26px;
+  color: #fff;
+}
+
+.discover-food-sub {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.discover-food-button {
+  background-color: #ed1d24;
+  width: 120px;
+  height: 45px;
+  font-size: 18px;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* VISIT US */
+.visit-us {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative; /* Ensures absolute-positioned elements are relative to this container */
+  overflow: hidden; /* Prevents clouds from spilling outside the container */
+}
+
+/* Positioning cloud images */
+.cloud-top-left {
+  position: absolute;
+  top: 80px;
+  left: -80px;
+  /* transform: translate(-50%, -50%); Adjusts to place it slightly out of the viewport if desired */
+  width: 500px;
+}
+
+.cloud-bottom-right {
+  position: absolute;
+  bottom: 50px;
+  right: -100px;
+  /* transform: translate(50%, 50%); Adjusts to place it slightly out of the viewport if desired */
+  width: 500px;
+}
+
+.cloud-bottom-left {
+  position: absolute;
+  bottom: -100px;
+  left: -90px;
+  /* transform: translate(-50%, 50%); Adjusts to place it slightly out of the viewport if desired */
+  width: 300px;
+  transform: rotate(45deg);
+}
+
+/* Existing styles */
+.visit-us-header {
+  font-size: 102px;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 26px;
+  color: #ed1d24;
+}
+
+.visit-us-sub {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.visit-us-button {
+  background-color: #ed1d24;
+  width: 120px;
+  height: 45px;
+  font-size: 18px;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: #ed1d24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 28px;
+  color: #fff;
+}
+
+.social {
+  width: 50px;
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.footer-container a {
+  text-decoration: none;
+}
+
+@media (max-width: 890px) {
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+
+  .navbar a {
+    margin-left: 0;
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .main-page {
+    background-position: 0%;
+  }
+
+  .main p {
+    font-size: 24px;
+  }
+
+  .footer {
+    padding: 0px 20px; /* Reduce padding */
+    height: 140px; /* Allow footer to adjust height */
+    flex-direction: row; /* Stack logo and text vertically */
+    align-items: center; /* Align items to the left */
+    justify-content: flex-start; /* Align content to the left */
+  }
+
+  .footer-logo {
+    position: relative; /* Reset absolute positioning */
+    height: 200px; /* Reduce logo size */
+    margin-bottom: 10px; /* Add some space below logo */
+  }
+
+  .footer-text {
+    margin-left: 0; /* Remove margin to the left */
+    font-size: 24px; /* Reduce font size for smaller screens */
+    justify-content: flex-start; /* Align text to the left */
+  }
+
+  .line {
+    width: 60px; /* Adjust width of line */
+    margin-right: 0; /* Remove margin */
+  }
+
+  .cloud1 {
+    width: 300px;
+  }
+
+  .hello-there p {
+    width: auto;
+  }
+}
+
+/* Active State for Navbar */
+.navbar.active {
+  display: flex;
+}
