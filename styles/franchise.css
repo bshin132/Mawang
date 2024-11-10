@@ -795,3 +795,57 @@ footer {
 .footer-container a {
   text-decoration: none;
 }
+
+@media (max-width: 890px) {
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+
+  .navbar a {
+    margin-left: 0;
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .continue-to-invest {
+    padding: 15px;
+  }
+
+  .continue-to-invest h1 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .points {
+    flex-direction: column;
+  }
+
+  .franchise-benefits h1, p {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .franchise-points {
+    flex-direction: column;
+  }
+
+  
+}

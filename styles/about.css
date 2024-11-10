@@ -300,13 +300,13 @@ h1 {
   border-radius: 15px;
   object-fit: cover;
 }
-
 /* VALUES */
 .values {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .values img {
@@ -329,6 +329,7 @@ h1 {
   margin: 0 auto;
   color: #fff;
   margin-bottom: 30px;
+  flex-wrap: wrap; /* Allow wrapping of values content */
 }
 
 .values-points-content {
@@ -360,6 +361,41 @@ h1 {
   font-size: 14px;
 }
 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .values {
+    gap: 30px; /* Reduce gap between items */
+    padding: 20px; /* Add padding for mobile */
+  }
+
+  .values-content {
+    width: 90%; /* Make the content section more flexible */
+    margin-bottom: 40px; /* Reduce bottom margin */
+  }
+
+  .values img {
+    width: 80%; /* Reduce image size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .values-points {
+    flex-direction: column; /* Stack the values vertically */
+    gap: 20px; /* Adjust space between items */
+  }
+
+  .values-points-content {
+    width: 90%; /* Make the values content section flexible */
+    height: auto; /* Allow content to grow vertically */
+  }
+
+  .values-points-content h1 {
+    font-size: 20px; /* Reduce font size */
+  }
+
+  .values-points-content p {
+    font-size: 12px; /* Reduce font size */
+  }
+}
 /* FOOTER */
 footer {
   width: 100%;
@@ -419,8 +455,13 @@ footer {
     display: flex;
   }
 
+  .continue-to-invest {
+    padding: 15px;
+  }
+
   .continue-to-invest h1 {
     text-align: center;
+    font-size: 28px;
   }
 
   .intro p {
@@ -449,5 +490,57 @@ footer {
   .gallery-pics img {
     width: 300px;
     height: 300px;
+  }
+
+  .mission {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: center; /* Center align both the text and image */
+    text-align: center; /* Center the text */
+    height: auto;
+    padding: 30px;
+  }
+
+  .mission-content {
+    margin-bottom: 0;
+  }
+
+  .mission-content h1 {
+    font-size: 32px; /* Adjust heading font size for smaller screens */
+  }
+
+  .mission-subtitle {
+    font-size: 16px; /* Adjust subtitle font size */
+  }
+
+  .mission img {
+    width: 80%; /* Adjust image size to 80% of its container */
+  }
+
+  .mission-statement {
+    font-size: 16px; /* Adjust font size for the statement */
+    margin-top: 10px; /* Add some space above the statement */
+  }
+
+  .values-content {
+    width: 100%; /* Allow content to take up full width */
+  }
+
+  .values img {
+    width: 100%; /* Make image full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .values-points-content {
+    width: 100%; /* Make values content full width */
+    height: auto; /* Adjust height */
+    padding: 10px; /* Add padding for smaller screens */
+  }
+
+  .values-points-content h1 {
+    font-size: 18px; /* Further reduce font size */
+  }
+
+  .values-points-content p {
+    font-size: 16px; /* Further reduce font size */
   }
 }
