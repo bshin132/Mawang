@@ -116,12 +116,13 @@ button:hover {
 }
 
 .about-franchise h1 {
+  letter-spacing: 6px;
+  z-index: 0;
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  letter-spacing: 6px;
-  z-index: 50;
+  margin-bottom: 5px;
   color: #ed1d24;
 }
 
@@ -190,6 +191,7 @@ button:hover {
   font-family: "Raleway", sans-serif;
   letter-spacing: 2px;
   font-size: 48px;
+  font-weight: 800;
 }
 
 .continue-to-invest img {
@@ -847,5 +849,5 @@ footer {
     flex-direction: column;
   }
 
-  
+
 }
