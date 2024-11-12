@@ -361,41 +361,6 @@ h1 {
   font-size: 14px;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .values {
-    gap: 30px; /* Reduce gap between items */
-    padding: 20px; /* Add padding for mobile */
-  }
-
-  .values-content {
-    width: 90%; /* Make the content section more flexible */
-    margin-bottom: 40px; /* Reduce bottom margin */
-  }
-
-  .values img {
-    width: 80%; /* Reduce image size for smaller screens */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .values-points {
-    flex-direction: column; /* Stack the values vertically */
-    gap: 20px; /* Adjust space between items */
-  }
-
-  .values-points-content {
-    width: 90%; /* Make the values content section flexible */
-    height: auto; /* Allow content to grow vertically */
-  }
-
-  .values-points-content h1 {
-    font-size: 20px; /* Reduce font size */
-  }
-
-  .values-points-content p {
-    font-size: 12px; /* Reduce font size */
-  }
-}
 /* FOOTER */
 footer {
   width: 100%;
@@ -427,17 +392,39 @@ footer {
 }
 
 @media (max-width: 890px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Prevent horizontal scroll on body and html */
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  /* Specific sections */
+  .container,
+  .section {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
   .navbar {
     display: none;
     position: absolute;
     top: 60px;
     right: 30px;
     background-color: #fff;
-    width: 100%;
+    width: 90%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex-direction: column;
     padding: 10px 20px;
     margin-top: 10px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Move it back by 50% of its width */
   }
 
   .navbar a {
@@ -500,6 +487,12 @@ footer {
     padding: 30px;
   }
 
+  .mission-subtitle,
+  .mission-statement {
+    width: 70%;
+    margin: 0 auto;
+  }
+
   .mission-content {
     margin-bottom: 0;
   }
@@ -514,6 +507,7 @@ footer {
 
   .mission img {
     width: 80%; /* Adjust image size to 80% of its container */
+    height: 300px;
   }
 
   .mission-statement {
@@ -523,11 +517,21 @@ footer {
 
   .values-content {
     width: 100%; /* Allow content to take up full width */
+    margin-bottom: 0;
+  }
+
+  .values-content h1,
+  .mission-subtitle {
+    text-align: center;
   }
 
   .values img {
-    width: 100%; /* Make image full width */
+    width: 80%; /* Make image full width */
     height: auto; /* Maintain aspect ratio */
+  }
+
+  .values-points {
+    width: 80%;
   }
 
   .values-points-content {
