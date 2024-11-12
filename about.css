@@ -210,7 +210,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/images/mawang_store2.png);
+  background-image: url(mawang_store2.png);
   background-size: cover;
   background-position: center;
   filter: blur(2px); /* Applies blur only to the background */
