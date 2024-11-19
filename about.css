@@ -26,6 +26,11 @@ html {
   border-bottom: 1px solid #000;
 }
 
+.navbar a.active {
+  color: #ed1d24 !important; /* Use !important to override other styles if needed */
+  font-weight: 800;
+}
+
 .header a {
   text-decoration: none;
 }

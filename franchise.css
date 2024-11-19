@@ -71,6 +71,11 @@ html {
   width: 100%;
 }
 
+.navbar a.active {
+  color: #ed1d24 !important; /* Use !important to override other styles if needed */
+  font-weight: 800;
+}
+
 /* Hamburger Menu (for mobile view) */
 .hamburger {
   display: none;
@@ -892,7 +897,7 @@ footer {
     position: relative;
     top: -10px;
   }
-  
+
   .contact-form {
     width: 90%;
     margin: 0 auto;
